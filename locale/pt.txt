@@ -1,0 +1,14 @@
+#: locale=pt
+
+## Media
+
+### Title
+album_4AF90139_4659_874D_41C6_8FDB9C3E18C8_0.label = frases de deus  (12)
+album_4AF90139_4659_874D_41C6_8FDB9C3E18C8.label = Álbum de Fotos frases de deus  (12)
+
+## Tour
+
+### Description
+
+### Title
+tour.name = jamais desistir
