@@ -6,16 +6,16 @@
     <meta name="viewport" id="metaViewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover" data-tdv-general-scale="0.5"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <script src="lib/tdvplayer.js?v=1676218169878"></script>
-    <link rel="preload" href="locale/pt.txt?v=1676218169878" as="fetch" crossorigin="anonymous"/>
-	<link rel="preload" href="script.js?v=1676218169878" as="script"/>
+    <script src="lib/tdvplayer.js?v=1676218322325"></script>
+    <link rel="preload" href="locale/pt.txt?v=1676218322325" as="fetch" crossorigin="anonymous"/>
+	<link rel="preload" href="script.js?v=1676218322325" as="script"/>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FHN86J2GJB&l=gaDataLayer"></script><script>  window.gaDataLayer = window.gaDataLayer || [];  function gtag(){gaDataLayer.push(arguments);}  window.gtag = gtag;  gtag("js", new Date());  gtag("config", "G-FHN86J2GJB", {"anonymize_ip":true});</script>
 	<meta name="description" content="Virtual Tour"/>
 	<meta name="theme-color" content="#000000"/>
-    <script src="script.js?v=1676218169878"></script>
+    <script src="script.js?v=1676218322325"></script>
     <script type="text/javascript">
         var tour;
-        var devicesUrl = {"general":"script_general.js?v=1676218169878"};
+        var devicesUrl = {"general":"script_general.js?v=1676218322325"};
 
         (function()
         {
@@ -58,9 +58,9 @@
 
             var settings = new TDV.PlayerSettings();
             settings.set(TDV.PlayerSettings.CONTAINER, document.getElementById('viewer'));
-            settings.set(TDV.PlayerSettings.WEBVR_POLYFILL_URL, 'lib/WebVRPolyfill.js?v=1676218169878');
-            settings.set(TDV.PlayerSettings.HLS_URL, 'lib/Hls.js?v=1676218169878');
-            settings.set(TDV.PlayerSettings.QUERY_STRING_PARAMETERS, 'v=1676218169878');
+            settings.set(TDV.PlayerSettings.WEBVR_POLYFILL_URL, 'lib/WebVRPolyfill.js?v=1676218322325');
+            settings.set(TDV.PlayerSettings.HLS_URL, 'lib/Hls.js?v=1676218322325');
+            settings.set(TDV.PlayerSettings.QUERY_STRING_PARAMETERS, 'v=1676218322325');
 
             tour = new TDV.Tour(settings, devicesUrl);
             tour.bind(TDV.Tour.EVENT_TOUR_INITIALIZED, onVirtualTourInit);
@@ -193,7 +193,7 @@
         function onBodyClick(){
             document.body.removeEventListener("click", onBodyClick);
             document.body.removeEventListener("touchend", onBodyClick);
-            loadTour();
+            
         }
 
         function onLoad() {
@@ -230,9 +230,8 @@
                 return;
             }
 
-            document.body.addEventListener("click", onBodyClick);
-			document.body.addEventListener("touchend", onBodyClick);
-			showPreloader();
+            showPreloader();
+			loadTour();
         }
 
         
